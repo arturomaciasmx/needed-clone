@@ -214,6 +214,7 @@
     </script>
   
   {% render 'shogun-head' %}
+{% render 'limoniapps-discountninja-header' %}{%- if product -%}{%- assign discountninjaproduct = product -%}{%- endif -%}{%- if collection -%}{%- assign discountninjacollection = collection -%}{%- endif -%}
 </head>
 
   <body class="gradient">
@@ -270,5 +271,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  {% include 'limoniapps-discountninja-body' %}
+</body>
 </html>
