@@ -223,6 +223,12 @@ This file can be re-written at any time.
   {% render 'shogun-head' %}
 {% render 'limoniapps-discountninja-header' %}{%- if product -%}{%- assign discountninjaproduct = product -%}{%- endif -%}{%- if collection -%}{%- assign discountninjacollection = collection -%}{%- endif -%}
 
+
+{% if content_for_header contains 'fastbundle.co' %}
+    {% render 'fast_bundle_service' %}
+{% endif %}
+
+
 </head>
 
 
